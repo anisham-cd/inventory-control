@@ -2,32 +2,39 @@ let responseBuilder = require('../helper/responseBuilder');
 let employee=[];
 function push(body){
     body['id']=employee.length+1;
-
-let resp=responseBuilder.responseBuilder(employee)
-return resp;
+    employee.push(body);
+    let resp=responseBuilder.responseBuilder(employee)
+    return resp;
 }
-function listByName(name){
+function listByName(body){
     let result=[];
     for(let elem of employee){
-        if(elem.name.toLowerCase()==name.toLowerCase())
-        result.push (elem)
+        if(elem.name.toLowerCase()==body.name.toLowerCase())
+        result.push (elem);
     }
     let resp=responseBuilder.responseBuilder(result)
     return resp;
 
 }
-function list(query){
+function list(body){
    let result=[];
     for(let elem of employee){
-        if(query.name)
-           if(elem.name.toLowerCase()==query.name.toLowerCase())
-           result.push (elem)
-        else if(query.location)
-           if(elem.location.toLowerCase()==query.location.toLowerCase())
-           result.push (elem)
-        else if(query.age)
-           if(elem.age==query.age)
-           result.push (elem)
+        if(body.name){
+            if(elem.name.toLowerCase()==body.name.toLowerCase())
+             result.push(elem)
+        }
+        else if(body.location){
+        if(elem.location.toLowerCase()==body.location.toLowerCase())
+            result.push(elem)
+        }
+        else if(body.age){
+            if(elem.age==body.age)
+              result.push(elem)
+        }     
+        else if(body.id){
+            if(elem.id==body.id)
+             result.push(elem)
+        }
     }
     let resp=responseBuilder.responseBuilder(result)
     return resp;
