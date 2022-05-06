@@ -1,5 +1,13 @@
 let utilsPing=require('../utils/ping');
 let utilsEmployee=require('../utils/employee');
+
+
+function signUp(request,response){
+    let data=utilsEmployee.push(request.body)
+
+    console.log(data)
+    response.send(data)
+}
 function list(request,response){
     let data=utilsEmployee.list(request.body)
     response.send(data)
@@ -18,5 +26,6 @@ function listByName(request,response){
 module.exports={
     list,
     push,
-    listByName
+    listByName,
+    signUp
 }

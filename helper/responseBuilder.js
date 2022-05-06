@@ -13,7 +13,17 @@ function errorMessage(msg){
         }
         return value;
     }
+function error(body){
+        let value={
+            "code":400,
+            "message":"signUp failed",
+            "data":body
+        }
+        return value;
+    }
+
 module.exports={
     responseBuilder,
-    errorMessage
+    errorMessage,
+    error
 }

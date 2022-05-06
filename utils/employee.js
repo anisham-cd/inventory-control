@@ -1,7 +1,21 @@
 let responseBuilder = require('../helper/responseBuilder');
+let constant=require('../helper/constant');
 let employee=[];
+function signUp(body){
+ 
+    let resp=responseBuilder.error(body)
+    return resp;
+
+}
 function push(body){
-    body['id']=employee.length+1;
+    body["id"]=employee.length+1;
+
+
+    body['name']=body.name.charAt(0).toUpperCase()+body.name.substring(1);
+    body['password']=body.password.charAt(0).toUpperCase()+body.password.substring(1);
+    body['hobby']=body.hobby.charAt(0).toUpperCase()+body.hobby.substring(1);
+
+
     employee.push(body);
     let resp=responseBuilder.responseBuilder(employee)
     return resp;
@@ -43,5 +57,6 @@ module.exports={
     
     push,
     listByName,
-    list
+    list,
+    signUp
 }
