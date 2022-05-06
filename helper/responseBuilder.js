@@ -1,3 +1,14 @@
+const fs=require("fs")
+
+function addData(data,path){
+    fs.writeFile(path,data,'utf8',(err)=>{
+        if(err){
+            console.log(err);
+        }
+        return data;
+    })
+    return data;
+    }
 function responseBuilder(data){
     let value={
         "code":200,
@@ -25,5 +36,6 @@ function error(body){
 module.exports={
     responseBuilder,
     errorMessage,
-    error
+    error,
+    addData
 }

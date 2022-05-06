@@ -7,12 +7,10 @@ const routes=require('./router/routes');
 
 //const godown=require('./src/controller/godown/godown');
 const app=express();
-const port=process.env.PORT ||3003
+const port=process.env.PORT ||3004;
 var bodyParser=require('body-parser')
 app.use(bodyParser.json());
 app.use('/api/v1',routes);
 app.get('/ping',ping.ping)
 
-app.listen(port,()=>{
-    console.log(`server is running in port no ${port}` )
-})
+app.listen(port,console.log(`server is running in port no ${port}`))

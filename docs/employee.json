@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Hari",
+    "dob": "04-04-2000",
+    "password": "mandatory",
+    "email": "ani@gmial.com",
+    "hobby": "optional",
+    "id": 1
+  },
+  {
+    "name": "Anisha",
+    "age": "24",
+    "location": "kolapur",
+    "id": 2
+  },
+  {
+    "name": "Karthik",
+    "age": "25",
+    "location": "kolapur",
+    "id": 3
+  }
+]

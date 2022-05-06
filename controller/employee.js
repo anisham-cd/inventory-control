@@ -3,7 +3,7 @@ let utilsEmployee=require('../utils/employee');
 
 
 function signUp(request,response){
-    let data=utilsEmployee.push(request.body)
+    let data=utilsEmployee.push1(request.body)
 
     console.log(data)
     response.send(data)
@@ -14,7 +14,7 @@ function list(request,response){
 }
 function push(request,response){
     //console.log(request)
-    let data=utilsEmployee.push(request.body)
+    let data=utilsEmployee.push1(request.body)
     console.log(data)
     response.send(data)
 

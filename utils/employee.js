@@ -1,23 +1,22 @@
 let responseBuilder = require('../helper/responseBuilder');
 let constant=require('../helper/constant');
-let employee=[];
+let employee=require('../docs/employee.json');
+
+// let employee=[];
 function signUp(body){
  
     let resp=responseBuilder.error(body)
     return resp;
-
 }
-function push(body){
+function push1(body){
     body["id"]=employee.length+1;
-
-
     body['name']=body.name.charAt(0).toUpperCase()+body.name.substring(1);
-    body['password']=body.password.charAt(0).toUpperCase()+body.password.substring(1);
-    body['hobby']=body.hobby.charAt(0).toUpperCase()+body.hobby.substring(1);
-
-
+    //body['hobby']=body.hobby.charAt(0).toUpperCase()+body.hobby.substring(1);
     employee.push(body);
-    let resp=responseBuilder.responseBuilder(employee)
+    console.log(employee)
+    let value=JSON.stringify(employee,null,2);
+    let resp=responseBuilder.addData(value,'docs/employee.json');
+    console.log(resp)
     return resp;
 }
 function listByName(body){
@@ -55,7 +54,7 @@ function list(body){
 }
 module.exports={
     
-    push,
+    push1,
     listByName,
     list,
     signUp
