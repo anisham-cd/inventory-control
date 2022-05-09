@@ -8,6 +8,12 @@ function signUp(request,response){
     console.log(data)
     response.send(data)
 }
+function login(request,response){
+    let data=utilsEmployee.login(request.body)
+
+    console.log(data)
+    response.send(data)
+}
 function list(request,response){
     let data=utilsEmployee.list(request.body)
     response.send(data)
@@ -23,9 +29,22 @@ function listByName(request,response){
     let data=utilsEmployee.listByName(request.body)
     response.send(data)
 }
+
+function encrypt(request,response){
+    let data=utilsEmployee.encrypt(request.body)
+    response.send(data)
+}
+function decrypt(request,response){
+    let data=utilsEmployee.decrypt(request.body)
+    response.send(data)
+}
 module.exports={
     list,
     push,
     listByName,
-    signUp
+    signUp,
+    login,
+    encrypt,
+    decrypt
+   
 }
