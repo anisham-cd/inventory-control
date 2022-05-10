@@ -1,11 +1,6 @@
 const express=require('express');
 const ping=require('./controller/ping');
 const routes=require('./router/routes');
-//const routers = require('./src/routes/routes');
-//const responseBuilder=require('../helper/responseBuilder')
-
-
-//const godown=require('./src/controller/godown/godown');
 const app=express();
 const port=process.env.PORT ||3004;
 var bodyParser=require('body-parser')
