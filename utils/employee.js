@@ -38,9 +38,7 @@ function login(body){
             let resp=responseBuilder.responseBuilder(constant.user.userDoesnotExist)
             return resp;
         }
-        let resp=responseBuilder.responseBuilder(constant.user.userDoesnotExist)
-        return resp;
-
+       
        
     }
 
@@ -48,7 +46,13 @@ function login(body){
  
 function push1(body){
     body["id"]=employee.length+1;
-    body['name']=body.name.charAt(0).toUpperCase()+body.name.substring(1);
+    for(let elem of employee)
+      if(elem.email==body.email){
+        let resp=responseBuilder.responseBuilder(constant.value)
+        return resp;
+  
+      }
+      body['name']=body.name.charAt(0).toUpperCase()+body.name.substring(1);
     //body['hobby']=body.hobby.charAt(0).toUpperCase()+body.hobby.substring(1);
     employee.push(body);
     console.log(employee)

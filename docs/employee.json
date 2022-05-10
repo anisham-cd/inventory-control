@@ -1,22 +1,27 @@
 [
+  {},
+  {
+    "name": "Anisha",
+    "dob": "04-04-2000",
+    "password": "mandatory",
+    "email": "ani@gmail.com",
+    "hobby": "optional",
+    "id": 2
+  },
+  {
+    "name": "Nisha",
+    "dob": "04-04-2000",
+    "password": "mandatory",
+    "email": "nisha@gmail.com",
+    "hobby": "optional",
+    "id": 3
+  },
   {
     "name": "Hari",
     "dob": "04-04-2000",
     "password": "mandatory",
-    "email": "ani@gmial.com",
+    "email": "harit@gmail.com",
     "hobby": "optional",
-    "id": 1
-  },
-  {
-    "name": "Anisha",
-    "age": "24",
-    "location": "kolapur",
-    "id": 2
-  },
-  {
-    "name": "Karthik",
-    "age": "25",
-    "location": "kolapur",
-    "id": 3
+    "id": 4
   }
 ]
