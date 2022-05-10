@@ -1,5 +1,5 @@
 let baseSuccess="The file has been fetched";
-let baseError="Error hss occured";
+let baseError="Error has occured";
 let alreadyExist="value is already exist";
 let invalid="The given data is not sufficient,provide the neccessary data ";
 let userLogin={
