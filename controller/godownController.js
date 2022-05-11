@@ -8,14 +8,15 @@ function list(request,response){
 }
 function push(request,response){
     //console.log(request)
-    let data=utilsShop.push1(request.body)
+    let data=utilsGodown.push1(request.body)
     //console.log(data)
     response.send(data)
 
 }
 function listByName(request,response){
-    let data=utilsShop.listByName(request.query)
+    let data=utilsGodown.listByName(request.body)
     response.send(data)
+    //console.log(data)
 }
 module.exports={
     list,

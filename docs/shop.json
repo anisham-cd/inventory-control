@@ -8,5 +8,35 @@
     "name": "MK",
     "location": "kerala",
     "id": 2
+  },
+  {
+    "name": "Srm shop",
+    "location": "chennai",
+    "id": 3
+  },
+  {
+    "name": "Srm godown",
+    "location": "chennai",
+    "id": 4
+  },
+  {
+    "name": "Srm shop",
+    "location": "chennai",
+    "id": 5
+  },
+  {
+    "name": "Srm shop",
+    "location": "chennai",
+    "id": 6
+  },
+  {
+    "name": "KDJ shop",
+    "location": "neelambur",
+    "id": 7
+  },
+  {
+    "name": "KDJ shop",
+    "location": "neelambur",
+    "id": 8
   }
 ]

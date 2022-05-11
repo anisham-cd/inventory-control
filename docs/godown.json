@@ -1,3 +1,52 @@
 [
-    
+  {
+    "name": " godown3",
+    "location": "chennai",
+    "id": 1
+  },
+  {
+    "name": " godown2",
+    "location": "chennai",
+    "id": 2
+  },
+  {
+    "name": " godown2",
+    "location": "chennai",
+    "id": 3
+  },
+  {
+    "name": " godown2",
+    "location": "chennai",
+    "id": 4
+  },
+  {
+    "name": " godown1",
+    "location": "chennai",
+    "id": 5
+  },
+  {
+    "name": " godown7",
+    "location": "chennai",
+    "id": 6
+  },
+  {
+    "name": " godown1",
+    "location": "chennai",
+    "id": 7
+  },
+  {
+    "name": " godown1",
+    "location": "chennai",
+    "id": 8
+  },
+  {
+    "name": " godown12",
+    "location": "chennai",
+    "id": 9
+  },
+  {
+    "name": " godown12",
+    "location": "chennai",
+    "id": 10
+  }
 ]
