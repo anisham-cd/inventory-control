@@ -3,7 +3,7 @@ let utilsGodown=require('../utils/godown');
 
 
 function list(request,response){
-    let data=utilsShop.list(request.body)
+    let data=utilsGodown.list(request.body)
     response.send(data)
 }
 function push(request,response){

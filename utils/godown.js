@@ -19,7 +19,7 @@ function listByName(body){
         if(body.name){
             if(elem.name.toLowerCase()==body.name.toLowerCase())
                 result.push(elem);
-               // let resp=responseBuilder.responseBuilder(result)
+               //let resp=responseBuilder.responseBuilder(constant.value)
                 //return resp;
     }      
         else if(body.location){

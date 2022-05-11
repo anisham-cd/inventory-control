@@ -15,7 +15,7 @@ function login(request,response){
     response.send(data)
 }
 function list(request,response){
-    let data=utilsEmployee.list(request.body)
+    let data=utilsEmployee.list(request.query)
     response.send(data)
 }
 function push(request,response){
@@ -27,6 +27,10 @@ function push(request,response){
 }
 function listByName(request,response){
     let data=utilsEmployee.listByName(request.body)
+    response.send(data)
+}
+function employeeRole(request,response){
+    let data=utilsEmployee.employeeRole(request.body)
     response.send(data)
 }
 
@@ -43,6 +47,7 @@ module.exports={
     push,
     listByName,
     signUp,
+    employeeRole,
     login,
     encrypt,
     decrypt

@@ -1,33 +1,52 @@
 [
   {
-    "name": "Anisha",
-    "dob": "04-04-2000",
+    "name": "Githa",
+    "role": "Tl",
+    "dob": "04-04-1989",
     "password": "mandatory",
-    "email": "harit@gmail.com",
-    "hobby": "optional",
+    "step": 1,
+    "email": "githa@gmail.com",
+    "hobby": "Optional",
     "id": 1
   },
   {
     "name": "Anisha",
-    "dob": "04-04-2000",
+    "role": "Engineer",
+    "dob": "04-04-1989",
     "password": "mandatory",
+    "step": 1,
     "email": "ani@gmail.com",
-    "hobby": "optional",
+    "hobby": "Optional",
     "id": 2
   },
   {
-    "name": "Hari",
-    "dob": "04-04-2000",
+    "name": "Kishore",
+    "role": "L1",
+    "dob": "04-04-1989",
     "password": "mandatory",
-    "email": "hari@gmail.com",
-    "hobby": "optional",
+    "step": 1,
+    "email": "ks@gmail.com",
+    "hobby": "Optional",
     "id": 3
   },
   {
-    "name": "Karthik",
-    "age": "25",
-    "location": "kolapur",
+    "name": "Hari",
+    "role": "Engineer",
+    "dob": "04-04-1989",
+    "password": "mandatory",
+    "step": 1,
+    "email": "hr@gmail.com",
+    "hobby": "Optional",
     "id": 4
+  },
+  {
+    "name": "Manisha",
+    "role": "Hr",
+    "dob": "04-04-1989",
+    "password": "mandatory",
+    "step": 1,
+    "email": "manisha@gmail.com",
+    "hobby": "Optional",
+    "id": 5
   }
-  
 ]

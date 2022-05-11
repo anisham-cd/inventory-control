@@ -11,6 +11,7 @@ router.post('/login',commonmiddlewares.decrypt,middlewaresEmp.loginValidator,emp
 router.get('/list',employeeController.list)
 router.post('/push',employeeController.push)
 router.get('/listByName',employeeController.listByName)
+router.get('/employeeRole',employeeController.employeeRole)
 
 router.post('/encrypt',employeeController.encrypt)
 router.post('/decrypt',employeeController.decrypt)
