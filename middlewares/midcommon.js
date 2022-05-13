@@ -16,7 +16,26 @@ let common=require('../helper/common')
        
     
     }
+    function checkAdminRoles(req,res,next){
+        let body=req.body;
+        if (!body.authToken){
+            let resp=responseBuilder.error(constant.data)
+            res.send(resp)
+        }
+        else{
+            let data=JSON.parse(common.decrypt(body.authToken))
+            if(data.role!='admin')
+            {
+                let resp=responseBuilder.error(constant.userLogin.authorizationFailed)
+                res.send(resp)
+            }
+            else
+            next();
+        }
+
+    }
     
 module.exports={
-    decrypt
+    decrypt,
+    checkAdminRoles
 }

@@ -5,13 +5,14 @@ const middlewaresEmp=require('../../middlewares/midEmployee');
 const commonmiddlewares=require('../../middlewares/midcommon');
 
 
-router.post('/signUp',commonmiddlewares.decrypt,middlewaresEmp.signupValidator,employeeController.signUp);
-router.post('/login',commonmiddlewares.decrypt,middlewaresEmp.loginValidator,employeeController.login);
+router.post('/signUp',/*commonmiddlewares.decrypt,*/middlewaresEmp.signupValidator,employeeController.signUp);
+router.post('/login',/*commonmiddlewares.decrypt,*/middlewaresEmp.loginValidator,employeeController.login);
 
 router.get('/list',employeeController.list)
 router.post('/push',employeeController.push)
 router.get('/listByName',employeeController.listByName)
-router.get('/employeeRole',employeeController.employeeRole)
+router.get('/employeeRole',commonmiddlewares.checkAdminRoles,employeeController.employeeRole)
+router.get('/emailVerification',employeeController.isValidEmail)
 
 router.post('/encrypt',employeeController.encrypt)
 router.post('/decrypt',employeeController.decrypt)

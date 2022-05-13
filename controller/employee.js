@@ -33,6 +33,10 @@ function employeeRole(request,response){
     let data=utilsEmployee.employeeRole(request.body)
     response.send(data)
 }
+function isValidEmail(request,response){
+    let data=utilsEmployee.isValidEmail(request.body)
+    response.send(data)
+}
 
 function encrypt(request,response){
     let data=utilsEmployee.encrypt(request.body)
@@ -48,6 +52,7 @@ module.exports={
     listByName,
     signUp,
     employeeRole,
+    isValidEmail,
     login,
     encrypt,
     decrypt

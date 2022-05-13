@@ -1,7 +1,7 @@
 [
   {
     "name": "Githa",
-    "role": "Tl",
+    "role": "admin",
     "dob": "04-04-1989",
     "password": "mandatory",
     "step": 1,
@@ -11,7 +11,7 @@
   },
   {
     "name": "Anisha",
-    "role": "Engineer",
+    "role": "admin",
     "dob": "04-04-1989",
     "password": "mandatory",
     "step": 1,
@@ -41,12 +41,96 @@
   },
   {
     "name": "Manisha",
-    "role": "Hr",
+    "role": "admin",
     "dob": "04-04-1989",
     "password": "mandatory",
     "step": 1,
     "email": "manisha@gmail.com",
     "hobby": "Optional",
     "id": 5
+  },
+  {
+    "name": "Anisha",
+    "role": "",
+    "dob": "04-04-1989",
+    "password": "mandatory",
+    "step": 1,
+    "email": "anisha@gmail.com",
+    "hobby": "Optional",
+    "id": 6
+  },
+  {
+    "name": "Isha",
+    "role": "Hr",
+    "dob": "04-04-1989",
+    "password": "mandatory",
+    "step": 1,
+    "email": "asha@gmail.com",
+    "hobby": "Optional",
+    "id": 7
+  },
+  {
+    "name": "Isha1",
+    "dob": "04-04-1989",
+    "password": "mandatory",
+    "step": 1,
+    "email": "isha02@gmail.com",
+    "hobby": "Optional",
+    "id": 8
+  },
+  {
+    "name": "Isha2",
+    "dob": "04-04-1989",
+    "password": "mandatory",
+    "step": 1,
+    "email": "isha22@gmail.com",
+    "hobby": "Optional",
+    "id": 9
+  },
+  {
+    "name": "Isha2",
+    "dob": "04-04-1989",
+    "password": "mandatory",
+    "step": 1,
+    "email": "isha92@gmail.com",
+    "hobby": "Optional",
+    "id": 10,
+    "role": "hr"
+  },
+  {
+    "name": "Isha2",
+    "dob": "04-04-1989",
+    "password": "mandatory",
+    "step": 1,
+    "email": "isha920@gmail.com",
+    "hobby": "Optional",
+    "id": 11
+  },
+  {
+    "name": "Isha9",
+    "dob": "04-04-1989",
+    "password": "mandatory",
+    "step": 1,
+    "email": "isha99@gmail.com",
+    "hobby": "Optional",
+    "id": 12
+  },
+  {
+    "name": "Anisha09",
+    "dob": "04-04-1989",
+    "password": "mandatory",
+    "step": 1,
+    "email": "anisha99@gmail.com",
+    "hobby": "Optional",
+    "id": 13
+  },
+  {
+    "name": "Anisha09",
+    "dob": "04-04-1989",
+    "password": "mandatory",
+    "step": 1,
+    "email": "anisha02@gmail.com",
+    "hobby": "Optional",
+    "id": 14
   }
 ]

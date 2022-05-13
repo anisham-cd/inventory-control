@@ -11,6 +11,7 @@ function encrypt(PlainText){
     return encryptedPlainText;
 
 }
+
 module.exports={
     decrypt,
     encrypt

@@ -4,16 +4,10 @@ let constant=require('../helper/constant');
 let shop=require('../docs/shop.json');
 function push1(body){
     body["id"]=shop.length+1;
-    //for(let elem of employee)
-      //if(elem.email==body.email){
-        //let resp=responseBuilder.responseBuilder(constant.value)
-        //return resp;
-  
-      
+    
       body['name']=body.name.charAt(0).toUpperCase()+body.name.substring(1);
-    //body['hobby']=body.hobby.charAt(0).toUpperCase()+body.hobby.substring(1);
+    
     shop.push(body);
-    //console.log(shop)
     let value=JSON.stringify(shop,null,2);
     let resp=responseBuilder.addData(value,'docs/shop.json');
     console.log(resp)

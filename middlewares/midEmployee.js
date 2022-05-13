@@ -14,7 +14,7 @@ let employee=[];
     function loginValidator(req,res,next){
         console.log('login valid')
         let body=req.body
-        if (!body.name||!body.dob||!body.password||!body.email){
+        if (!body.password||!body.email){
             let resp=responseBuilder.responseBuilder(body)
             res.send(resp);
         }
