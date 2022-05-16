@@ -3,19 +3,20 @@ let fs=require('fs')
 let constant=require('../helper/constant');
 let common=require('../helper/common');
 let employee=require('../docs/employee.json');
+const { networkInterfaces } = require('os');
 //const res = require('express/lib/response');
 
-let employees=[{
-    "id":1,
-    "name":"mandatory",
-     "role":"",
-     "dob":"04-04-1989",
-     "password":"mandatory",
-     "step":1,
-      "email": "mandatory@gmail.com",
-      "hobby":"optional"
+//let employees=[{
+  //  "id":1,
+    //"name":"mandatory",
+     //"role":"",
+     //"dob":"04-04-1989",
+     //"password":"mandatory",
+     //"step":1,
+     //"email": "mandatory@gmail.com",
+      //"hobby":"optional"
 
- }];
+ //}];
 function signUp(body){
     body.role="user";
     body.id=employee.length+1;
@@ -36,12 +37,15 @@ function login(body){
        
         {
             let token=common.encrypt(JSON.stringify({
-                role:elem.role
+                role:elem.role,
+                exp:Date.now()+(30*1000)
         }))
             let res={
                 data:elem,
-                AuthToken:token
+                AuthToken: token
+               
             }
+        
                // console.log(res)
             
                 let resp=responseBuilder.responseBuilder(res)
@@ -74,7 +78,7 @@ function login(body){
   
       }
     body['name']=body.name.charAt(0).toUpperCase()+body.name.substring(1);
-  //  body['role']=body.role.charAt(0).toUpperCase()+body.role.substring(1);
+    body['role']=body.role.charAt(0).toUpperCase()+body.role.substring(1);
     body['hobby']=body.hobby.charAt(0).toUpperCase()+body.hobby.substring(1);
 
 
@@ -93,13 +97,25 @@ function listByName(body){
                 result.push (elem);
          }
         else if(body.role){
-            if(elem.role==body.role)
+            if(elem.role.toLowerCase()==body.role.toLowerCase())
                 result.push (elem);
         }
         else if(body.hobby){
             if(elem.hobby.toLowerCase()==body.hobby.toLowerCase())
                 result.push (elem);
         }
+        if(body.email){
+            if(elem.email==body.email)
+                result.push (elem);
+         }
+         if(body.shopName){
+            if(elem.shopName.toLowerCase()==body.shopName.toLowerCase())
+                result.push (elem);
+         }
+         if(body.shopId){
+            if(elem.shopId==body.shopId)
+                result.push (elem);
+         }
     }
     let resp=responseBuilder.responseBuilder(result)
     return resp;
@@ -128,6 +144,14 @@ function list(query){
             if(elem.id==query.id)
              result.push(elem)
         }
+        else if(query.shopId){
+            if(elem.shopId==query.shopId)
+             result.push(elem)
+        }
+        else if(query.shopName){
+            if(elem.shopName.toLowerCase()==query.shopName.toLowerCase())
+             result.push(elem)
+        }
         else if(query.email){
             if(elem.email==query.email)
              result.push(elem)
@@ -143,7 +167,7 @@ function list(query){
 function employeeRole(body){
     let id=body.id;
     let role=body.role;
-    for (elem of employee){
+    for (let elem of employee){
          if(elem.id==id){
             elem.role=role;
             let data=JSON.stringify(employee,null,2)
@@ -156,27 +180,14 @@ function employeeRole(body){
                 role:role
             } 
             
-        let resp=responseBuilder.responseBuilder(result)
-        return resp;
-        
-        
-        }
-    }
-  
-        let resp=responseBuilder.error(constant.user.userDoesnotExist);
-        return resp;
+            let resp=responseBuilder.responseBuilder(res)
+            return resp;
+        } 
+}  
+    let resp=responseBuilder.error(constant.user.authorizationFailed);
+    return resp;
 }
-    
-    
-    function isValidEmail(email) {
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-      }
-
-    //let resp=responseBuilder.responseBuilder(constant.verify.verificationFai
-     //return resp
-           
-        
+   
         
   //  let resp=responseBuilder.responseBuilder(result)
     //    return resp;
@@ -199,7 +210,7 @@ module.exports={
     listByName,
     list,
     employeeRole,
-    isValidEmail,
+    //isValidEmail,
     signUp,
     login,
     encrypt,

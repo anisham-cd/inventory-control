@@ -1,41 +1,49 @@
 [
   {
-    "name": "TN shop",
+    "shopName": "TN shop",
+    "shopId":"S001",
     "location": "karnataka",
     "id": 1
   },
   {
-    "name": "MK",
+    "shopName": "MK",
+    "shopId":"S002",
     "location": "kerala",
     "id": 2
   },
   {
-    "name": "Srm shop",
+    "shopName": "SRM shop",
+    "shopId":"S003",
     "location": "chennai",
     "id": 3
   },
   {
-    "name": "Srm godown",
+    "shopName": "SRM shop2",
+    "shopId":"S004",
     "location": "chennai",
     "id": 4
   },
   {
-    "name": "Srm shop",
+    "shopName": "SSK shop",
+    "shopId":"S005",
     "location": "chennai",
     "id": 5
   },
   {
-    "name": "Srm shop",
+    "shopName": "SMR shop",
+    "shopId":"S006",
     "location": "chennai",
     "id": 6
   },
   {
-    "name": "KDJ shop",
+    "shopName": "KDJ shop",
+    "shopId":"S007",
     "location": "neelambur",
     "id": 7
   },
   {
-    "name": "KDJ shop",
+    "shopName": "PJ shop",
+    "shopId":"S008",
     "location": "neelambur",
     "id": 8
   }
